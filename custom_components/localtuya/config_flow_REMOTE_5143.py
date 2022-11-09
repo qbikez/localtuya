@@ -86,7 +86,7 @@ CONFIGURE_DEVICE_SCHEMA = vol.Schema(
     {
         vol.Required(CONF_FRIENDLY_NAME): str,
         vol.Required(CONF_LOCAL_KEY): str,
-        vol.Optional(CONF_HOST): str,
+        vol.Required(CONF_HOST): str,
         vol.Required(CONF_DEVICE_ID): str,
         vol.Required(CONF_PROTOCOL_VERSION, default="3.3"): vol.In(["3.1", "3.3"]),
         vol.Optional(CONF_SCAN_INTERVAL): int,
@@ -97,7 +97,7 @@ CONFIGURE_DEVICE_SCHEMA = vol.Schema(
 
 DEVICE_SCHEMA = vol.Schema(
     {
-        vol.Optional(CONF_HOST): cv.string,
+        vol.Required(CONF_HOST): cv.string,
         vol.Required(CONF_DEVICE_ID): cv.string,
         vol.Required(CONF_LOCAL_KEY): cv.string,
         vol.Required(CONF_FRIENDLY_NAME): cv.string,

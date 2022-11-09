@@ -89,9 +89,12 @@ CONFIGURE_DEVICE_SCHEMA = vol.Schema(
         vol.Optional(CONF_HOST): str,
         vol.Required(CONF_DEVICE_ID): str,
         vol.Required(CONF_PROTOCOL_VERSION, default="3.3"): vol.In(["3.1", "3.3"]),
+<<<<<<< HEAD
+=======
         vol.Optional(CONF_SCAN_INTERVAL): int,
         vol.Optional(CONF_MANUAL_DPS): str,
         vol.Optional(CONF_RESET_DPIDS): str,
+>>>>>>> upstream/master
     }
 )
 
